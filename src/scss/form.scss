@@ -1,0 +1,75 @@
+.form {
+
+  &__set {
+    border: none;
+  }
+
+  &__title {
+    position: relative;
+    font-size: 3.5rem;
+    line-height: 5rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: -16px;
+      content: "";
+      width: 4px;
+      height: 100%;
+      background-color: $color-active;
+      border-top-right-radius: 8px;
+      border-bottom-right-radius: 8px;
+
+      @media (min-width: $screen-xl) {
+        left: -32px;
+      }
+    }
+  }
+
+  &__link {
+    color: $color-accent;
+  }
+
+  &__field {
+    background: #FFFFFF;
+    border: 1px solid #EAEAEA;
+    border-radius: 8px;
+    font-size: 16px;
+    line-height: 24px;
+    width: 100%;
+    padding: 12px 16px;
+    font-family: "TT Lakes", sans-serif;
+    outline: 0 solid transparent;
+
+    &:hover, &:focus {
+      border-color: transparentize($color-active, 0.6);
+      box-shadow: 0 0 0 2px transparentize($color-active, 0.6);
+    }
+
+    &::placeholder {
+      color: #B5B6BC;
+    }
+
+    &--input {
+      margin-bottom: 16px;
+    }
+
+    &--textarea {
+      height: 118px;
+      resize: none;
+    }
+  }
+
+  &__agreement {
+    margin-bottom: 19px;
+    font-size: 1.75rem;
+    line-height: 2rem;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: flex-end;
+  }
+}

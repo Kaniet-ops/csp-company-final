@@ -1,0 +1,76 @@
+.ui-button {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  cursor: pointer;
+  transition: transform 100ms ease-in-out;
+
+  &:hover, &:focus {
+    .ui-button {
+      &__icon-container {
+        background-color: $color-active;
+      }
+    }
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+
+  &__text {
+    margin-right: 9px;
+
+    @media (max-width: $screen-lg) {
+      display: none;
+    }
+  }
+
+  &__icon-container {
+    background-color: $color-accent;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__icon {
+    fill: white;
+
+    &--arrow {
+      fill: $color-accent;
+      transform: translateX(1px);
+    }
+  }
+
+  &--outline {
+
+    .ui-button {
+      &__icon-container {
+        background-color: #ffffff;
+        border: 2px solid $color-accent;
+        transition: background-color 160ms ease-in-out;
+      }
+
+      &__icon {
+        fill: $color-accent;
+        transform: translateX(1px);
+        transition: transform 160ms ease-in-out;
+      }
+    }
+
+    &:hover, &:focus {
+      .ui-button {
+        &__icon-container {
+          background-color: $color-accent;
+        }
+
+        &__icon {
+          fill: #ffffff;
+          transform: translateX(1px) scale(1.1);
+        }
+      }
+    }
+  }
+}

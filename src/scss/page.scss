@@ -1,0 +1,16 @@
+.page {
+  min-width: 320px;
+  font-size: 2rem;
+  line-height: 3rem;
+  background-color: $color-main-bg;
+  display: flex;
+  position: relative;
+
+  @media (max-width: $screen-lg) {
+    flex-direction: column;
+  }
+
+  &--open-modal {
+    overflow: hidden;
+  }
+}

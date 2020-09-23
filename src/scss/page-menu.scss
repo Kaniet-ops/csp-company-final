@@ -1,0 +1,47 @@
+.page-menu {
+
+  @media (max-width: $screen-sm) {
+    margin-bottom: 24px;
+    padding: 0 16px;
+  }
+
+  @media (min-width: $screen-md) and (max-width: $screen-lg) {
+    margin-bottom: 32px;
+    padding: 0 24px;
+  }
+
+  @media (min-width: $screen-xl) {
+    margin-bottom: 10px;
+    padding: 0 32px;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+
+    @media (max-width: $screen-sm) {
+      overflow-x: scroll;
+    }
+
+    @media (min-width: $screen-md) {
+      flex-wrap: wrap;
+    }
+
+  }
+
+  &__list-item {
+    flex-shrink: 0;
+  }
+
+  &__link {
+    display: block;
+    border-radius: 6px;
+    padding: 6px 16px;
+    border: 2px solid transparent;
+
+    &:hover {
+      border-color: $color-border--active;
+      background-color: #fff;
+    }
+  }
+}

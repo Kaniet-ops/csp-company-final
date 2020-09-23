@@ -1,0 +1,10 @@
+.phone-number {
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 4rem;
+
+  &:hover,
+  &:focus {
+    color: $color-active;
+  }
+}

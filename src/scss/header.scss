@@ -1,0 +1,115 @@
+.header {
+
+  @media (max-width: $screen-sm) {
+    padding: 0 16px;
+  }
+
+  @media (min-width: $screen-md) and (max-width: $screen-lg) {
+    padding: 0 24px;
+  }
+
+  @media (max-width: $screen-lg) {
+    border-bottom: 1px solid $color-border--active;
+    background-color: #fff;
+    height: 88px;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+  }
+
+  @media (min-width: $screen-xl) {
+    background-color: transparent;
+  }
+
+  &__title {
+    margin-bottom: 24px;
+  }
+
+  &__logo {
+    flex: 1 1 auto;
+
+    @media (max-width: $screen-sm) {
+      text-align: center;
+    }
+
+    @media (min-width: $screen-md) {
+      margin: 0 20px;
+    }
+
+    @media (min-width: $screen-xl) {
+      display: none;
+    }
+  }
+
+  &__button {
+    @media (min-width: $screen-md) and (max-width: $screen-lg) {
+      position: relative;
+      margin-right: 20px;
+    }
+
+    @media (min-width: $screen-xl) {
+      display: none;
+    }
+
+    &::after {
+      @media (min-width: $screen-md) and (max-width: $screen-lg) {
+        content: "";
+        position: absolute;
+        background-color: $color-separator;
+        height: 32px;
+        width: 2px;
+        border-radius: 1px;
+        top: 50%;
+        right: -20px;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  &__button-groups {
+    @media (min-width: $screen-xl) {
+      position: absolute;
+      top: 42px;
+      right: 32px;
+      z-index: 1;
+    }
+  }
+
+  &__button-groups-item {
+
+    &:first-child {
+      @media (min-width: $screen-xl) {
+        display: none;
+      }
+    }
+
+    &:not(:last-child) {
+      @media (max-width: $screen-sm) {
+        display: none;
+      }
+    }
+
+    &:last-child {
+      @media (max-width: $screen-sm) {
+        position: relative;
+        margin-left: 22px;
+      }
+
+      &::before {
+        @media (max-width: $screen-sm) {
+          content: "";
+          position: absolute;
+          background-color: $color-separator;
+          height: 32px;
+          width: 2px;
+          border-radius: 1px;
+          top: 50%;
+          left: -22px;
+          transform: translateY(-50%);
+        }
+      }
+    }
+  }
+}

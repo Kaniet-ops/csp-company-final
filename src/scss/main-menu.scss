@@ -1,0 +1,35 @@
+.main-menu {
+
+  &__link {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    height: 48px;
+    padding: 0 24px;
+    outline: none;
+
+    &:focus,
+    &[href]:hover {
+      color: $color-main-bg;
+      background-color: $color-accent;
+    }
+
+    &--active {
+      color: $text-color--muted;
+      position: relative;
+
+      &::before {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        content: "";
+        width: 4px;
+        height: 32px;
+        background-color: $color-active;
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+      }
+    }
+  }
+}
